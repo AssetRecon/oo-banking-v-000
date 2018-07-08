@@ -10,11 +10,11 @@ def initialize(sender,receiver, amount)
 end
 
 def valid?
-  sender.valid? && receiver.valid?
+  @sender.valid? && @receiver.valid?
 end
 
 def execute_transaction
-  if @status == "pending" && valid?
+  if @status == "pending" && self.valid?
  @sender.balance -= @amount
  @receiver.balance += @amount
  @status = "complete"
