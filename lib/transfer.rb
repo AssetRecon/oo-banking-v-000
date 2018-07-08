@@ -21,9 +21,7 @@ def execute_transaction
  elsif @status = "complete"
    @sender.balance
    @receiver.balance
-   
- end
-
+  end
 end
 
 end
